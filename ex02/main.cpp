@@ -6,7 +6,7 @@
 /*   By: rivasque <rivasque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:38:02 by ritavasques       #+#    #+#             */
-/*   Updated: 2025/04/01 15:47:16 by rivasque         ###   ########.fr       */
+/*   Updated: 2025/04/01 18:31:21 by rivasque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <typeinfo>
 
 Base * generate(void) {
 	Base* create;
@@ -62,21 +61,21 @@ void identify(Base & p) {
 			std::cout << "Base A" << std::endl;
 			return ;
 	   }
-	   catch (std::bad_cast &bc) {}
+	   catch (std::exception &e) {}
 	   try
 	   {
 			(void)dynamic_cast<B&>(p);
 			std::cout << "Base B" << std::endl;
 			return ;
 	   }
-	   catch (std::bad_cast &bc) {}
+	   catch (std::exception &e) {}
 	   try
 	   {
 			(void)dynamic_cast<C&>(p);
 			std::cout << "Base C" << std::endl;
 			return ;
 	   }
-	   catch (std::bad_cast &bc) {}
+	   catch (std::exception &e) {}
 }
 
 int main(void) {
