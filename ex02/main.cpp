@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rivasque <rivasque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:38:02 by ritavasques       #+#    #+#             */
-/*   Updated: 2025/03/31 15:17:48 by ritavasques      ###   ########.fr       */
+/*   Updated: 2025/04/01 15:47:16 by rivasque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <typeinfo>
 
 Base * generate(void) {
 	Base* create;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rivasque <rivasque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:59:30 by ritavasques       #+#    #+#             */
-/*   Updated: 2025/03/31 13:26:12 by ritavasques      ###   ########.fr       */
+/*   Updated: 2025/04/01 14:29:04 by rivasque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ ScalarConverter::operator char() {
     char c = 0;
     std::cout << "char: ";
     try {
-        c = stoi(_str);
+        c = std::atoi(_str.c_str());
+        if (_str == "nan" || _str == "+inf" || _str == "-inf")
+        {
+            std::cout << "impossible" << std::endl;
+            return (0);
+        }
         if (c < 32 || c > 126)
         {
             std::cout << "Non displayable" << std::endl;
@@ -58,8 +63,11 @@ ScalarConverter::operator int() {
     int i = 0;
     std::cout << "int: ";
     try {
-        i = stoi(_str);
-        std::cout << i << std::endl;
+        i = std::atoi(_str.c_str());
+        if (_str == "nan" || _str == "+inf" || _str == "-inf")
+            std::cout << "impossible" << std::endl;
+        else
+            std::cout << i << std::endl;
     }
     catch (std::invalid_argument &e) {
         std::cout << "impossible" << std::endl;
@@ -74,7 +82,7 @@ ScalarConverter::operator float() {
     float f = 0;
     std::cout << "float: ";
     try {
-        f = stof(_str);
+        f = std::atof(_str.c_str());
         std::cout << std::fixed << std::setprecision(1) << f << "f" << std::endl;
     }
     catch (std::invalid_argument &e) {
@@ -90,7 +98,7 @@ ScalarConverter::operator double() {
     double d = 0;
     std::cout << "double: ";
     try {
-        d = stod(_str);
+        d = std::atof(_str.c_str());
         std::cout << std::fixed << std::setprecision(1) << d << std::endl;
     }
     catch (std::invalid_argument &e) {

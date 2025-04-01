@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rivasque <rivasque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 13:52:11 by ritavasques       #+#    #+#             */
-/*   Updated: 2025/03/31 14:15:25 by ritavasques      ###   ########.fr       */
+/*   Updated: 2025/04/01 15:44:42 by rivasque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DATA_HPP
 
 # include <iostream>
+# include <stdint.h>
 
 class Data {
     public:

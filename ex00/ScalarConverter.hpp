@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
+/*   By: rivasque <rivasque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 10:57:10 by ritavasques       #+#    #+#             */
-/*   Updated: 2025/03/31 13:23:42 by ritavasques      ###   ########.fr       */
+/*   Updated: 2025/04/01 14:12:02 by rivasque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALARCONVERTER_HPP
 # define SCALARCONVERTER_HPP
 
-#include <iostream>
-#include <iomanip>
+# include <iostream>
+# include <iomanip>
+# include <string>
+# include <cstdlib>
+# include <climits>
 
 class ScalarConverter {
     public:
